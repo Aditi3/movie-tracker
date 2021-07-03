@@ -15,8 +15,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wTO-vH-Uow">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="42c-Wz-hFe"/>
@@ -35,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-lI-DIg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sOz-Kg-c3v">
@@ -54,7 +52,7 @@
                         <constraints>
                             <constraint firstItem="s4l-lI-DIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JgG-Jk-Nav"/>
                             <constraint firstItem="s4l-lI-DIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M76-9q-oQN"/>
-                            <constraint firstAttribute="bottom" secondItem="s4l-lI-DIg" secondAttribute="bottom" id="RVf-hd-cvj"/>
+                            <constraint firstAttribute="bottom" secondItem="s4l-lI-DIg" secondAttribute="bottom" constant="20" id="RVf-hd-cvj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s4l-lI-DIg" secondAttribute="trailing" id="iML-r7-uTI"/>
                         </constraints>
                     </view>
