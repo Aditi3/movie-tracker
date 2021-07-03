@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     func setupUI() {
         self.title = "Your List"
-        if let navigationBar = self.navigationController?.navigationBar  {
+        if let navigationBar = self.navigationController?.navigationBar {
             navigationBar.barStyle = UIBarStyle.default;
             navigationBar.barTintColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
             navigationBar.backgroundColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
