@@ -43,7 +43,6 @@ class MovieManagerTests: XCTestCase {
         sut.addMovie(movie: scifiMovie)
         
         XCTAssertEqual(sut.moviesToSeeCount, 1)
-        
     }
     
     func testQuery_ReturnMovieAtIndex() {
@@ -79,4 +78,29 @@ class MovieManagerTests: XCTestCase {
         XCTAssertEqual(actionMovie.title, movieQueried.title)
     }
     
+    // MARK: Clearing and Resetting
+
+    func testClearArrays_ReturnsArrayCountOfZero() {
+        sut.addMovie(movie: scifiMovie)
+        sut.addMovie(movie: actionMovie)
+        sut.checkOffMovieAtIndex(index: 0)
+
+        XCTAssertEqual(sut.moviesToSeeCount, 1)
+        XCTAssertEqual(sut.moviesSeenCount, 1)
+        
+        sut.clearArrays()
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 0)
+        XCTAssertEqual(sut.moviesSeenCount, 0)
+    }
+    
+    // MARK: Duplicate
+    
+    func testDuplicate_ShouldNotBeAddedToArray() {
+        sut.addMovie(movie: scifiMovie)
+        sut.addMovie(movie: scifiMovie)
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 1)
+    }
+
 }

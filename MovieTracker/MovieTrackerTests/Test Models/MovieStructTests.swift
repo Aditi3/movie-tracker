@@ -22,6 +22,8 @@ class MovieStructTests: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: Set
+
     func testInit_SetMovieWithTitle() {
         let testMovie = MovieModel(title: "Generic")
         XCTAssertNotNil(testMovie)
@@ -33,6 +35,8 @@ class MovieStructTests: XCTestCase {
         XCTAssertNotNil(testMovie)
         XCTAssertEqual(testMovie.releaseDate, "1991")
     }
+    
+    // MARK: Equatable
     
     func testEquatable_ReturnsTrue() {
         let actionMovie1 = MovieModel(title: "Action")
@@ -54,5 +58,7 @@ class MovieStructTests: XCTestCase {
 
         XCTAssertNotEqual(actionMovie1, actionMovie2)
     }
+    
+   
 
 }
