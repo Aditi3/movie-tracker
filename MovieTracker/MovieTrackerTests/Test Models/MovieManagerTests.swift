@@ -12,6 +12,10 @@ class MovieManagerTests: XCTestCase {
     
     var sut: MovieManager!
     
+    let scifiMovie = MovieModel(title: "Sci-Fi")
+    let dramaMovie = MovieModel(title: "Drama")
+    let actionMovie = MovieModel(title: "Action")
+    
     override func setUpWithError() throws {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,6 +28,7 @@ class MovieManagerTests: XCTestCase {
     }
     
     // MARK: Initial Values
+    
     func testInit_MovieToSee_ReturnsZero() {
         XCTAssertEqual(sut.moviesToSeeCount, 0)
     }
@@ -35,20 +40,43 @@ class MovieManagerTests: XCTestCase {
     // MARK: Add and Query
     
     func testAdd_MovieToSee_ReturnOne() {
-        let testMovie = MovieModel(title: "Sci-Fi")
-        sut.addMovie(movie: testMovie)
+        sut.addMovie(movie: scifiMovie)
         
         XCTAssertEqual(sut.moviesToSeeCount, 1)
         
     }
     
     func testQuery_ReturnMovieAtIndex() {
-        let testMovie = MovieModel(title: "Sci-Fi")
-        sut.addMovie(movie: testMovie)
+        sut.addMovie(movie: dramaMovie)
         
         let movieQueried = sut.movieAtIndex(index: 0)
-        XCTAssertEqual(testMovie.title, movieQueried.title)
+        XCTAssertEqual(dramaMovie.title, movieQueried.title)
     }
     
+    // MARK: Checking off
+    
+    func testCheckOffMovie_UpdatesMovieManagerCount() {
+        sut.addMovie(movie: actionMovie)
+        sut.checkOffMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(sut.moviesToSeeCount, 0)
+        XCTAssertEqual(sut.moviesSeenCount, 1)
+    }
+    
+    func testCheckOffMovie_RemovesMovieFromArray() {
+        sut.addMovie(movie: scifiMovie)
+        sut.addMovie(movie: actionMovie)
+        sut.checkOffMovieAtIndex(index: 0)
+
+        XCTAssertEqual(sut.movieAtIndex(index: 0).title, actionMovie.title)
+    }
+    
+    func testCheckOffMovie_ReturnsMovieAtIndex() {
+        sut.addMovie(movie: actionMovie)
+        sut.checkOffMovieAtIndex(index: 0)
+        
+        let movieQueried = sut.checkedOffMovieAtIndex(index: 0)
+        XCTAssertEqual(actionMovie.title, movieQueried.title)
+    }
     
 }
