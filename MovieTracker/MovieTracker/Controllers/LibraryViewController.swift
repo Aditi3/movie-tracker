@@ -7,11 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LibraryViewController: UIViewController {
+    
+    @IBOutlet weak var libraryTableView: UITableView!
+    @IBOutlet var dataService: MovieLibraryDataService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.libraryTableView.dataSource = dataService
+        self.libraryTableView.delegate = dataService
     }
     
     override func viewWillAppear(_ animated: Bool) {
