@@ -29,13 +29,14 @@ class MovieLibraryDataService: NSObject, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
+        guard let movieManager = movieManager else { fatalError() }
+        guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCellID", for: indexPath) as! MovieCell
         
-//        guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
-//        switch librarySection {
-//        case .MoviesToSee:
-//        case .MoviesSeen:
-//        }
+        let movieData = librarySection.rawValue == 0 ? movieManager.movieAtIndex(index: indexPath.row) : movieManager.checkedOffMovieAtIndex(index: indexPath.row)
+        
+        cell.configMovieCell(movie: movieData)
 
         return cell
     }

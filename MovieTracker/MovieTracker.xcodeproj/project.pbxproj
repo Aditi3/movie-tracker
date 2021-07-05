@@ -21,6 +21,7 @@
 		49487DA12691FB8100BAB751 /* MovieLibraryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49487DA02691FB8100BAB751 /* MovieLibraryDataService.swift */; };
 		49487DA42691FEA500BAB751 /* MovieLibraryDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49487DA32691FEA500BAB751 /* MovieLibraryDataServiceTests.swift */; };
 		49487DA72692B55C00BAB751 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49487DA62692B55C00BAB751 /* MovieCell.swift */; };
+		49487DAA2692C3A900BAB751 /* MockExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49487DA92692C3A900BAB751 /* MockExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		49487DA02691FB8100BAB751 /* MovieLibraryDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLibraryDataService.swift; sourceTree = "<group>"; };
 		49487DA32691FEA500BAB751 /* MovieLibraryDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLibraryDataServiceTests.swift; sourceTree = "<group>"; };
 		49487DA62692B55C00BAB751 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		49487DA92692C3A900BAB751 /* MockExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		49487D7626905CE100BAB751 /* MovieTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				49487DA82692C39C00BAB751 /* Mocks */,
 				49487DA22691FE7800BAB751 /* Test Data Service */,
 				49487D972690AC0900BAB751 /* Test Controllers */,
 				49487D962690ABFD00BAB751 /* Test Models */,
@@ -208,6 +211,14 @@
 				49487DA62692B55C00BAB751 /* MovieCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		49487DA82692C39C00BAB751 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				49487DA92692C3A900BAB751 /* MockExtensions.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 				49487DA42691FEA500BAB751 /* MovieLibraryDataServiceTests.swift in Sources */,
 				49487D9A2690ACA400BAB751 /* MovieManagerTests.swift in Sources */,
 				49487D912690A72400BAB751 /* MovieStructTests.swift in Sources */,
+				49487DAA2692C3A900BAB751 /* MockExtensions.swift in Sources */,
 				49487D9F2691B9FC00BAB751 /* LibraryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

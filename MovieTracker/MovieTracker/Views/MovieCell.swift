@@ -8,6 +8,9 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var releaseDate: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +21,11 @@ class MovieCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configMovieCell(movie:  MovieModel) {
+//        self.title.text = movie.title
+//        self.releaseDate.text = movie.releaseDate ?? ""
     }
 
 }
