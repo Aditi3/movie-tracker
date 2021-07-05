@@ -6,8 +6,8 @@
 //
 
 import XCTest
-@testable import MovieTracker
 
+@testable import MovieTracker
 class MovieManagerTests: XCTestCase {
     
     var sut: MovieManager!

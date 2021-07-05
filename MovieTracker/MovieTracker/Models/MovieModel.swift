@@ -8,7 +8,6 @@
 import Foundation
 
 struct MovieModel: Equatable {
-    
     var title: String
     var releaseDate: String?
 }

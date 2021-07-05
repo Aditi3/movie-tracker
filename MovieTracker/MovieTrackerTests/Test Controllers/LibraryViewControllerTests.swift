@@ -8,7 +8,6 @@
 import XCTest
 
 @testable import MovieTracker
-
 class LibraryViewControllerTests: XCTestCase {
     
     var sut: LibraryViewController!
@@ -48,6 +47,5 @@ class LibraryViewControllerTests: XCTestCase {
     func testDataService_ViewDidLoad_SingleDataSerice() {
         XCTAssertEqual(sut.libraryTableView.dataSource is MovieLibraryDataService, sut.libraryTableView.delegate is MovieLibraryDataService)
     }
-    
     
 }
