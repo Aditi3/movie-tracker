@@ -55,18 +55,13 @@ class MovieLibraryDataService: NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Movies To See"
-        case 1:
-            return "Movies Seen"
-        default:
-            return "Movies"
-        }
+        guard let librarySection = LibrarySection(rawValue: section) else { fatalError() }
+        let sectionTitle = librarySection.rawValue == 0 ? "Movies To See" : "Movies Seen"
+        return sectionTitle
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 54.0
+        return 64.0
     }
     
 }
