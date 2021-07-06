@@ -26,8 +26,8 @@ class LibraryViewController: UIViewController {
         self.title = "Your List"
         if let navigationBar = self.navigationController?.navigationBar {
             navigationBar.barStyle = UIBarStyle.default;
-            navigationBar.barTintColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
-            navigationBar.backgroundColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
+            navigationBar.barTintColor = K.Color.primary
+            navigationBar.backgroundColor = K.Color.primary
             navigationBar.isTranslucent = false
         }
         self.libraryTableView.dataSource = dataService
@@ -40,11 +40,12 @@ class LibraryViewController: UIViewController {
         
         dataService.movieManager = movieManager
         
-        dataService.movieManager?.addMovie(movie: MovieModel(title: "Action", releaseDate: "1999"))
-        dataService.movieManager?.addMovie(movie: MovieModel(title: "Horror", releaseDate: "1989"))
-        dataService.movieManager?.addMovie(movie: MovieModel(title: "Crime Thriller", releaseDate: "1979"))
-        dataService.movieManager?.addMovie(movie: MovieModel(title: "Indie Comedy"))
-        dataService.movieManager?.addMovie(movie: MovieModel(title: "Kung Fu Flick"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "The Notebook"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "The Shawshank Redemption", releaseDate: "1994"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "The Godfather", releaseDate: "1972"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "The Dark Knight", releaseDate: "2008"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "Inception"))
+        dataService.movieManager?.addMovie(movie: MovieModel(title: "Goodfellas"))
         
         libraryTableView.reloadData()
     }

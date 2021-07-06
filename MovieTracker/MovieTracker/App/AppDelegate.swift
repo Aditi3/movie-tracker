@@ -14,43 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        UIApplication.shared.statusBarUIView?.backgroundColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
+        UIApplication.shared.statusBarUIView?.backgroundColor = K.Color.primary
         return true
     }
     
 }
 
-
 extension UIApplication {
+    
     var statusBarUIView: UIView? {
+        let tag = 1000
+        let keyWindow = UIApplication.shared.connectedScenes
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows.first
         
-        if #available(iOS 13.0, *) {
-            let tag = 3848245
-            
-            let keyWindow = UIApplication.shared.connectedScenes
-                .map({$0 as? UIWindowScene})
-                .compactMap({$0})
-                .first?.windows.first
-            
-            if let statusBar = keyWindow?.viewWithTag(tag) {
-                return statusBar
-            } else {
-                let height = keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? .zero
-                let statusBarView = UIView(frame: height)
-                statusBarView.tag = tag
-                statusBarView.layer.zPosition = 999999
-                
-                keyWindow?.addSubview(statusBarView)
-                return statusBarView
-            }
-            
+        if let statusBar = keyWindow?.viewWithTag(tag) {
+            return statusBar
         } else {
+            let height = keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? .zero
+            let statusBarView = UIView(frame: height)
+            statusBarView.tag = tag
+            statusBarView.layer.zPosition = 999999
             
-            if responds(to: Selector(("statusBar"))) {
-                return value(forKey: "statusBar") as? UIView
-            }
+            keyWindow?.addSubview(statusBarView)
+            return statusBarView
         }
-        return nil
     }
 }
