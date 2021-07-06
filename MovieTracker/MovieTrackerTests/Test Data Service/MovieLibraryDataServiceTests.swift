@@ -127,7 +127,6 @@ class MovieLibraryDataServiceTests: XCTestCase {
         XCTAssertEqual(section2Title, "Movies Seen")
     }
     
-    
 }
 
 
