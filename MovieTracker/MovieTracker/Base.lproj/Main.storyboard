@@ -69,8 +69,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="releaseDate" destination="jcL-Rq-AWe" id="38m-M1-tv1"/>
-                                            <outlet property="title" destination="mLs-fB-8nf" id="RYo-ci-sk4"/>
+                                            <outlet property="releaseDateLabel" destination="jcL-Rq-AWe" id="38m-M1-tv1"/>
+                                            <outlet property="titleLabel" destination="mLs-fB-8nf" id="RYo-ci-sk4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

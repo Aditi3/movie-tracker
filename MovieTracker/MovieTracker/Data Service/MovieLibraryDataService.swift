@@ -49,7 +49,7 @@ class MovieLibraryDataService: NSObject, UITableViewDelegate, UITableViewDataSou
         guard let movieManager = movieManager else { fatalError() }
         guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
         
-        if  librarySection.rawValue == 0 {
+        if librarySection == .MoviesToSee {
             movieManager.checkOffMovieAtIndex(index: indexPath.row)
             tableView.reloadData()
         }

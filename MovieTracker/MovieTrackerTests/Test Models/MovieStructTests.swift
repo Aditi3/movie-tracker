@@ -23,7 +23,7 @@ class MovieStructTests: XCTestCase {
     }
     
     // MARK: Set
-
+    
     func testInit_SetMovieWithTitle() {
         let testMovie = MovieModel(title: "Generic")
         XCTAssertNotNil(testMovie)
@@ -41,24 +41,24 @@ class MovieStructTests: XCTestCase {
     func testEquatable_ReturnsTrue() {
         let actionMovie1 = MovieModel(title: "Action")
         let actionMovie2 = MovieModel(title: "Action")
-
+        
         XCTAssertEqual(actionMovie1, actionMovie2)
     }
     
     func testEquatable_ReturnsNotEqualTitles() {
         let actionMovie1 = MovieModel(title: "Action")
         let actionMovie2 = MovieModel(title: "Adventure")
-
+        
         XCTAssertNotEqual(actionMovie1, actionMovie2)
     }
     
     func testEquatable_ReturnsNotEqualReleaseDates() {
         let actionMovie1 = MovieModel(title: "Action", releaseDate: "1989")
         let actionMovie2 = MovieModel(title: "Adventure", releaseDate: "2018")
-
+        
         XCTAssertNotEqual(actionMovie1, actionMovie2)
     }
     
-   
-
+    
+    
 }

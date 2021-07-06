@@ -24,7 +24,7 @@ class MovieLibraryDataServiceTests: XCTestCase {
         sut = MovieLibraryDataService()
         sut.movieManager = MovieManager()
         tableViewMock = TableViewMock.initMock(dataSource: sut)
-
+        
         libraryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LibraryViewController") as LibraryViewController
         _ = libraryVC.view
         
@@ -101,7 +101,7 @@ class MovieLibraryDataServiceTests: XCTestCase {
         sut.movieManager?.addMovie(movie: darkComedy)
         sut.movieManager?.addMovie(movie: fairyTale)
         sut.movieManager?.checkOffMovieAtIndex(index: 0)
-
+        
         tableViewMock.reloadData()
         
         let cell = tableViewMock.cellForRow(at: IndexPath(row: 0, section: 1)) as! MovieCellMock

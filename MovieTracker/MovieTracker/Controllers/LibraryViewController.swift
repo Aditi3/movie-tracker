@@ -21,12 +21,8 @@ class LibraryViewController: UIViewController {
         self.libraryTableView.dataSource = dataService
         self.libraryTableView.delegate = dataService
         self.libraryTableView.estimatedRowHeight = 44.0
-        
-        loadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         setupUI()
+        loadData()
     }
     
     func setupUI() {

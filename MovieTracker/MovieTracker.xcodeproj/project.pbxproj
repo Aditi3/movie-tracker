@@ -115,11 +115,11 @@
 		49487D5F26905CDE00BAB751 /* MovieTracker */ = {
 			isa = PBXGroup;
 			children = (
-				49487DA52692B53300BAB751 /* Views */,
-				49487D9B2690BC1400BAB751 /* Data Service */,
 				49487D982690AC2300BAB751 /* App */,
+				49487DA52692B53300BAB751 /* Views */,
 				49487D952690ABF100BAB751 /* Models */,
 				49487D942690ABE500BAB751 /* Controllers */,
+				49487D9B2690BC1400BAB751 /* Data Service */,
 				49487D6626905CDE00BAB751 /* Main.storyboard */,
 				49487D6926905CE100BAB751 /* Assets.xcassets */,
 				49487D6B26905CE100BAB751 /* LaunchScreen.storyboard */,
