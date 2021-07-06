@@ -34,13 +34,6 @@
 			remoteGlobalIDString = 49487D5C26905CDE00BAB751;
 			remoteInfo = MovieTracker;
 		};
-		49487D7F26905CE100BAB751 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49487D5526905CDE00BAB751 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49487D5C26905CDE00BAB751;
-			remoteInfo = MovieTracker;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +46,6 @@
 		49487D6E26905CE100BAB751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49487D7326905CE100BAB751 /* MovieTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49487D7926905CE100BAB751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49487D7E26905CE100BAB751 /* MovieTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49487D902690A72400BAB751 /* MovieStructTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStructTests.swift; sourceTree = "<group>"; };
 		49487D922690A7DB00BAB751 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		49487D992690ACA400BAB751 /* MovieManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerTests.swift; sourceTree = "<group>"; };
@@ -83,13 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49487D7B26905CE100BAB751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,7 +92,6 @@
 			children = (
 				49487D5D26905CDE00BAB751 /* MovieTracker.app */,
 				49487D7326905CE100BAB751 /* MovieTrackerTests.xctest */,
-				49487D7E26905CE100BAB751 /* MovieTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,24 +263,6 @@
 			productReference = 49487D7326905CE100BAB751 /* MovieTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		49487D7D26905CE100BAB751 /* MovieTrackerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49487D8D26905CE100BAB751 /* Build configuration list for PBXNativeTarget "MovieTrackerUITests" */;
-			buildPhases = (
-				49487D7A26905CE100BAB751 /* Sources */,
-				49487D7B26905CE100BAB751 /* Frameworks */,
-				49487D7C26905CE100BAB751 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49487D8026905CE100BAB751 /* PBXTargetDependency */,
-			);
-			name = MovieTrackerUITests;
-			productName = MovieTrackerUITests;
-			productReference = 49487D7E26905CE100BAB751 /* MovieTrackerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,10 +278,6 @@
 					49487D7226905CE100BAB751 = {
 						CreatedOnToolsVersion = 12.5;
 						LastSwiftMigration = 1250;
-						TestTargetID = 49487D5C26905CDE00BAB751;
-					};
-					49487D7D26905CE100BAB751 = {
-						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 49487D5C26905CDE00BAB751;
 					};
 				};
@@ -335,7 +297,6 @@
 			targets = (
 				49487D5C26905CDE00BAB751 /* MovieTracker */,
 				49487D7226905CE100BAB751 /* MovieTrackerTests */,
-				49487D7D26905CE100BAB751 /* MovieTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,13 +313,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		49487D7126905CE100BAB751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49487D7C26905CE100BAB751 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,13 +350,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49487D7A26905CE100BAB751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -410,11 +357,6 @@
 			isa = PBXTargetDependency;
 			target = 49487D5C26905CDE00BAB751 /* MovieTracker */;
 			targetProxy = 49487D7426905CE100BAB751 /* PBXContainerItemProxy */;
-		};
-		49487D8026905CE100BAB751 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49487D5C26905CDE00BAB751 /* MovieTracker */;
-			targetProxy = 49487D7F26905CE100BAB751 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -489,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -561,6 +503,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,44 +579,6 @@
 			};
 			name = Release;
 		};
-		49487D8E26905CE100BAB751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aditi.MovieTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieTracker;
-			};
-			name = Debug;
-		};
-		49487D8F26905CE100BAB751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aditi.MovieTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieTracker;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -699,15 +605,6 @@
 			buildConfigurations = (
 				49487D8B26905CE100BAB751 /* Debug */,
 				49487D8C26905CE100BAB751 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49487D8D26905CE100BAB751 /* Build configuration list for PBXNativeTarget "MovieTrackerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49487D8E26905CE100BAB751 /* Debug */,
-				49487D8F26905CE100BAB751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
