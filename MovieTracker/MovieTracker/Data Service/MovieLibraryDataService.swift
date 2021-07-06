@@ -28,7 +28,6 @@ class MovieLibraryDataService: NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let movieManager = movieManager else { fatalError() }
         guard let librarySection = LibrarySection(rawValue: indexPath.section) else { fatalError() }
         
@@ -56,7 +55,6 @@ class MovieLibraryDataService: NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         switch section {
         case 0:
             return "Movies To See"

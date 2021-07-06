@@ -15,7 +15,6 @@ class MovieManager {
     private var moviesToSeeArray = [MovieModel]()
     private var moviesSeenArray = [MovieModel]()
     
-    
     func addMovie(movie: MovieModel) {
         if !moviesToSeeArray.contains(movie) {
             moviesToSeeArray.append(movie)

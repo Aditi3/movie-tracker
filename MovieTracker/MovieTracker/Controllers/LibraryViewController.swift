@@ -17,10 +17,7 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.libraryTableView.dataSource = dataService
-        self.libraryTableView.delegate = dataService
-        self.libraryTableView.estimatedRowHeight = 44.0
+    
         setupUI()
         loadData()
     }
@@ -33,6 +30,10 @@ class LibraryViewController: UIViewController {
             navigationBar.backgroundColor = UIColor(red: 0.11, green: 0.73, blue: 0.33, alpha: 1.00)
             navigationBar.isTranslucent = false
         }
+        self.libraryTableView.dataSource = dataService
+        self.libraryTableView.delegate = dataService
+        self.libraryTableView.estimatedRowHeight = 44.0
+        self.libraryTableView.tableFooterView = UIView()
     }
     
     func loadData() {
