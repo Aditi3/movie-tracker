@@ -123,8 +123,8 @@
 				49487D942690ABE500BAB751 /* Controllers */,
 				49487D9B2690BC1400BAB751 /* Data Service */,
 				49487D6626905CDE00BAB751 /* Main.storyboard */,
-				49487D6926905CE100BAB751 /* Assets.xcassets */,
 				49487D6B26905CE100BAB751 /* LaunchScreen.storyboard */,
+				49487D6926905CE100BAB751 /* Assets.xcassets */,
 				49487D6E26905CE100BAB751 /* Info.plist */,
 			);
 			path = MovieTracker;
