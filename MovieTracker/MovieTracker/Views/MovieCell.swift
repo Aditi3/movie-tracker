@@ -24,8 +24,8 @@ class MovieCell: UITableViewCell {
     }
     
     func configMovieCell(movie:  MovieModel) {
-//        self.title.text = movie.title
-//        self.releaseDate.text = movie.releaseDate ?? ""
+        self.title.text = movie.title
+        self.releaseDate.text = movie.releaseDate ?? ""
     }
 
 }
